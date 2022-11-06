@@ -1,0 +1,26 @@
+.heading-medicines {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.ng-autocomplete {
+    width:100%;
+    max-width: 1000px;
+    display: table;
+    margin: 0 auto;
+}
+
+.medicine-details {
+    padding: 10px 50px;
+    caption {
+        display: inline-block;
+    }
+}
+
+.card {
+    display: table;
+    margin: 15px auto;
+    .card-img-top {
+        height: 250px;
+    }
+}

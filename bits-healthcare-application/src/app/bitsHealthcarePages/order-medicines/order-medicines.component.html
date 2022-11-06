@@ -1,0 +1,80 @@
+<h1 class="heading-medicines">Order Medicines</h1>
+
+<div class="ng-autocomplete">
+    <ng-autocomplete
+      [data]="drugs"
+      [searchKeyword]="keyword"
+      placeholder="Search Maedicines"
+      (selected)='selectEvent($event)'
+      (inputChanged)='onChangeSearch($event)'
+      (inputFocused)='onFocused($event)'
+      (inputCleared) = oninputCleared();
+      historyIdentifier="drugs"
+      [itemTemplate]="itemTemplate"
+      [notFoundTemplate]="notFoundTemplate">
+    </ng-autocomplete>
+  
+    <ng-template #itemTemplate let-item>
+      <a [innerHTML]="item.name"></a>
+    </ng-template>
+  
+    <ng-template #notFoundTemplate let-notFound>
+      <div [innerHTML]="notFound"></div>
+    </ng-template>
+
+    <div class="card" *ngIf="isCardOpen">
+      <img class="card-img-top" src="../../assets/img/pills.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{drugDeatail}}</h5>
+        <p class="card-text">{{drugDeatail}}, sold under the brand names Abilify and Aristada among others, is an atypical antipsychotic. It is primarily used in the treatment of schizophrenia and bipolar disorder. </p>
+        <button type="button" class="btn btn-primary" (click)="addItem();" routerLinkActive="active">Add to Order List</button>
+      </div>
+    </div>
+  </div>
+  <div class="medicine-details">
+    <table class="table table-striped">
+        <thead>
+            <caption>Medicines Details</caption>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Medicines Name</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Price</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>cetirizine</td>
+              <td>1 strip</td>
+              <td>100.00</td>
+              <td><button type="button" class="btn btn-primary" routerLinkActive="active">Order</button></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Dolo</td>
+              <td>1 strip</td>
+              <td>60.00</td>
+              <td><button type="button" class="btn btn-primary" routerLinkActive="active">Order</button></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Namcol</td>
+              <td>1 strip</td>
+              <td>160.00</td>
+              <td><button type="button" class="btn btn-primary" routerLinkActive="active">Order</button></td>
+            </tr>
+            <tr *ngIf="isItemAdded">
+              <th scope="row">4</th>
+              <td>{{drugDeatail}}</td>
+              <td>1 strip</td>
+              <td>160.00</td>
+              <td><button type="button" class="btn btn-primary" routerLinkActive="active">Order</button></td>
+            </tr>
+          </tbody>
+      </table>
+  </div>
+  
+
+

@@ -1,0 +1,89 @@
+
+.nav-container {
+    padding: 20px 30px;
+    nav {
+        float: right;
+        .header-nav {
+            margin: 0;
+            padding: 0;
+            li {
+                list-style-type: none;
+                display: inline;
+                margin-left: 20px;
+                a {
+                    text-decoration: none;
+                    margin-left: 5px;
+                }
+            }
+        }
+    } 
+}
+
+header {
+    background: url("../../../assets/img/bg-banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 440px;
+    padding-left: 60px;
+    padding-top: 25px;
+    .header-text {
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+
+    .action-button {
+        .doctor-appointment {
+            background: url("../../../assets/img/doctor_icon.svg") 20px 3px no-repeat;
+       }
+    
+       .lab-appointment {
+            background: url("../../../assets/img/hometest_icon.svg") 20px 3px no-repeat;
+       }
+    
+       .order-medicines {
+            background: url("../../../assets/img/medicines_icon.svg") 20px 3px no-repeat;
+       }
+       .btn {
+        display: block;
+        background-color: #fff;
+        color: #000;
+        padding: 15px 50px;
+        width: 417px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        }
+    }
+}
+
+body {
+    .transaction-details {
+        padding: 20px 60px;
+
+        caption {
+            display: inline-block;
+        }
+    }
+}
+
+.heading, .login{
+    text-align: center;
+}
+.login-body {
+    margin: 50px auto;
+    width: 500px;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.input-wrapper {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.submitbtn {
+    text-align: center;
+}
